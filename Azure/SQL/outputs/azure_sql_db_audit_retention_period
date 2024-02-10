@@ -1,0 +1,17 @@
+[
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/rg-name/providers/Microsoft.Sql/servers/<db-server>/databases/mini',
+        'audit_settings': 'Disabled',
+        'retention_period': 0
+    },
+    {
+        'db_id': '/subscriptions/subscription-id/resourceGroups/rg-name/providers/Microsoft.Sql/servers/<db-server>/databases/new-test',
+        'audit_settings': 'Disabled',
+        'retention_period': 0
+    },
+    {
+        'db_id': '/subscriptions/subscription-id/resourceGroups/rg-name/providers/Microsoft.Sql/servers/<db-server>/databases/master',
+        'audit_settings': 'Disabled',
+        'retention_period': 0
+    }
+]

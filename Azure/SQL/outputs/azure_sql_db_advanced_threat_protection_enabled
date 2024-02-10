@@ -1,0 +1,12 @@
+[
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Sql/servers/<server>/databases/<database>',
+        'policy_name': 'Default',
+        'state': 'Disabled'
+    },
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<resource-group>/providers/Microsoft.Sql/servers/<server>/databases/master',
+        'policy_name': 'Default',
+        'state': 'Disabled'
+    }
+]

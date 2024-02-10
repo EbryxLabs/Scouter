@@ -1,0 +1,17 @@
+[
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<db-server-name>/databases/mini',
+        'alerting_policy_state': 'Disabled',
+        'retention_period': 0
+    },
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<db-server-name>/databases/new-test',
+        'alerting_policy_state': 'Disabled',
+        'retention_period': 0
+    },
+    {
+        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<db-server-name>/databases/master',
+        'alerting_policy_state': 'Disabled',
+        'retention_period': 0
+    }
+]
