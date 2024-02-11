@@ -1,0 +1,7 @@
+[
+    {
+        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<server-name>',
+        'policy_name': 'Default',
+        'state': 'Enabled'
+    }
+]

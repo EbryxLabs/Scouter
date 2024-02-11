@@ -1,0 +1,16 @@
+[
+    {
+        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/test-for-scouter',
+        'policy_name': 'Default',
+        'recurringScans_enabled': False,
+    },
+    {
+        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/test-for-scouter',
+        'policy_name': 'Default',
+        'recurringScans_enabled': True,
+        'emails': {
+            'email1@mail.com',
+            'email2@mail.com'
+        }
+    }
+]
