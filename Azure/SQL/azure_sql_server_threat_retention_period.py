@@ -34,14 +34,20 @@ for subscription in subscriptions:
             diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.Sql/servers/{server_name}/securityAlertPolicies?api-version=2021-11-01"
             headers = {"Authorization": f"Bearer {credentials.get_token('https://management.azure.com').token}"}
             response = requests.get(diagnostic_settings_endpoint, headers=headers)
-            audit_data = response.json()
-            for audit_info in audit_data.get("value",[]):
-              policy_name=audit_info.get("name",{})
-              retention_days = audit_info.get('properties', {}).get('retentionDays')
-              state = audit_info.get('properties', {}).get('state')
-              emailAccountAdmins = audit_info.get('properties', {}).get('emailAccountAdmins')
+            server_info = response.json()
 
+            for server_info in server_info.get("value",[]):
+              policy_name=server_info.get("name",{})
+              retention_days = server_info.get('properties', {}).get('retentionDays')
+              state = server_info.get('properties', {}).get('state')
+              emailAccountAdmins = server_info.get('properties', {}).get('emailAccountAdmins')
+              disabledAlerts=server_info.get('properties', {}).get('disabledAlerts')
 
-              result_list.append({"server_id": server_id, "policy_name":policy_name, "auditing_state":state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins})
+              disabledAlerts_is_empty = all(element == '' for element in disabledAlerts)
+              if disabledAlerts_is_empty:
+                result_list.append({"server_id": server_id, "alerting_policy_state":state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins,"disabledAlerts":"None"})
+              else:
+                result_list.append({"server_id": server_id, "alerting_policy_state":state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins,"disabledAlerts":disabledAlerts})
+
 
 print(result_list)

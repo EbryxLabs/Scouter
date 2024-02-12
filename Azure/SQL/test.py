@@ -1,7 +1,26 @@
+
 from azure.identity import DefaultAzureCredential
 from azure.mgmt.resource import SubscriptionClient
 from azure.mgmt.resource import ResourceManagementClient
 import requests
+
+data = {
+    "properties": {
+        "state": "Enabled",
+        "emailAccountAdmins": True,
+        "emailAddresses": [
+            "test@microsoft.com",
+            "user@microsoft.com"
+        ],
+        "disabledAlerts": [
+            "Sql_Injection",
+            "Usage_Anomaly"
+        ],
+        "retentionDays": 6,
+        "storageAccountAccessKey": "sdlfkjabc+sdlfkjsdlkfsjdfLDKFTERLKFDFKLjsdfksjdflsdkfD2342309432849328476458/3RSD==",
+        "storageEndpoint": "https://mystorage.blob.core.windows.net"
+    }
+    }
 
 result_list = []
 disabledAlerts_list=[]
@@ -44,28 +63,11 @@ for subscription in subscriptions:
             for item in dbs.get("value",[]):
               db_name=item.get("name",{})
               db_id=item.get("id",{})
-              diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.Sql/servers/{server_name}/databases/{db_name}/securityAlertPolicies?api-version=2021-11-01"
-              headers = {"Authorization": f"Bearer {credentials.get_token('https://management.azure.com').token}"}
-              response = requests.get(diagnostic_settings_endpoint, headers=headers)
+              diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.Sql/servers/{server_name}/databases/{db_name}/securityAlertPolicies/default?api-version=2021-11-01"
+              headers = {"Authorization": f"Bearer {credentials.get_token('https://management.azure.com').token}","Content-Type": "application/json"}
+              response = requests.put(diagnostic_settings_endpoint, headers=headers,data=data)
+              print(response)
               db_info=response.json()
+              print(db_info)
 
-              for info in db_info.get("value",[]):
-                alerting_policy_state=info.get("properties",{}).get("state",{})
-                retention_days=info.get("properties",{}).get("retentionDays",{})
-                emailAccountAdmins = info.get('properties', {}).get('emailAccountAdmins')
-                disabledAlerts=info.get('properties', {}).get('disabledAlerts')
 
-                disabledAlerts_is_empty = all(element == '' for element in disabledAlerts)
-                if disabledAlerts_is_empty:
-                  result_list.append({"db_id": db_id, "alerting_policy_state":alerting_policy_state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins,"disabledAlerts":"None"})
-                else:
-                  result_list.append({"db_id": db_id, "alerting_policy_state":alerting_policy_state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins,"disabledAlerts":disabledAlerts})
-
-                # if len(disabledAlerts)>0:
-                #   for item in disabledAlerts:
-                #     disabledAlerts_list.append({item})                      
-                #   result_list.append({"disabledAlerts":disabledAlerts_list})
-
-                #append the output of the checks to a list
-
-print(result_list)
