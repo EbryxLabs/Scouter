@@ -39,7 +39,9 @@ for subscription in subscriptions:
               policy_name=audit_info.get("name",{})
               retention_days = audit_info.get('properties', {}).get('retentionDays')
               state = audit_info.get('properties', {}).get('state')
+              emailAccountAdmins = audit_info.get('properties', {}).get('emailAccountAdmins')
 
-              result_list.append({"server_id": server_id, "policy_name":policy_name, "auditing_state":state, "retention_period": retention_days})
+
+              result_list.append({"server_id": server_id, "policy_name":policy_name, "auditing_state":state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins})
 
 print(result_list)

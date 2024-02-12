@@ -50,8 +50,9 @@ for subscription in subscriptions:
               for info in db_info.get("value",[]):
                 alerting_policy_state=info.get("properties",{}).get("state",{})
                 retention_days=info.get("properties",{}).get("retentionDays",{})
+                emailAccountAdmins = info.get("properties",{}).get("emailAccountAdmins",{})
 
                 #append the output of the checks to a list
-                result_list.append({"db_id": db_id, "alerting_policy_state":alerting_policy_state, "retention_period": retention_days})
+                result_list.append({"db_id": db_id, "alerting_policy_state":alerting_policy_state, "retention_period": retention_days, "emailAccountAdmins":emailAccountAdmins})
 
 print(result_list)
