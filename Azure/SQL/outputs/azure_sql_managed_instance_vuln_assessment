@@ -1,11 +1,11 @@
 [
     {
-        'instance_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/managedInstances/test-for-scouter-2', 
+        'instance_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/managedInstances/<resource-name>-2', 
         'policy_name': 'Default', 
         'recurringScans_enabled': False
     },
     {
-        'instance_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/managedInstances/test-for-scouter-2', 
+        'instance_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/managedInstances/<resource-name>-2', 
         'policy_name': 'Default', 
         'recurringScans_enabled': True,
         'emails': {

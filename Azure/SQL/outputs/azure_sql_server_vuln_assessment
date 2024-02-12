@@ -1,11 +1,11 @@
 [
     {
-        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/test-for-scouter',
+        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>',
         'policy_name': 'Default',
         'recurringScans_enabled': False,
     },
     {
-        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/test-for-scouter',
+        'server_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>',
         'policy_name': 'Default',
         'recurringScans_enabled': True,
         'emails': {
