@@ -61,11 +61,4 @@ for subscription in subscriptions:
                 else:
                   result_list.append({"db_id": db_id, "alerting_policy_state":alerting_policy_state, "retention_period": retention_days, "emailAccountAdmins": emailAccountAdmins,"disabledAlerts":disabledAlerts})
 
-                # if len(disabledAlerts)>0:
-                #   for item in disabledAlerts:
-                #     disabledAlerts_list.append({item})                      
-                #   result_list.append({"disabledAlerts":disabledAlerts_list})
-
-                #append the output of the checks to a list
-
 print(result_list)
