@@ -1,0 +1,6 @@
+[
+    {
+        "id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.Sql/managedInstances/test-for-scouter2",
+        "azureADOnlyAuthentication": true
+    }
+]
