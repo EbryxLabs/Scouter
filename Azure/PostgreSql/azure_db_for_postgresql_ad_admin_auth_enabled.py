@@ -2,6 +2,22 @@ from azure.identity import DefaultAzureCredential
 from azure.mgmt.resource import SubscriptionClient
 from azure.mgmt.resource import ResourceManagementClient
 import requests
+import json
+import sys
+import os
+
+current_script_name = sys.argv[0]
+output_file_name = os.path.splitext(os.path.basename(current_script_name))[0]
+
+script_directory = os.path.dirname(os.path.abspath(__file__))
+
+output_directory = os.path.join(script_directory, "outputs")
+output_file = os.path.join(output_directory, output_file_name)
+
+
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
+
 
 result_list = []
 
@@ -53,4 +69,7 @@ for subscription in subscriptions:
 
                 result_list.append({"server_id":server_id,"server_name":server_name,"server_type":server_type,"ad_auth":ad_auth})
 
-print(result_list)
+print(json.dumps(result_list,indent=4))
+
+with open(output_file, 'w') as outfile:
+    json.dump(result_list, outfile, indent=4)

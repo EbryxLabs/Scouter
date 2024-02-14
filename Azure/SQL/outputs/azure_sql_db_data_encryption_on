@@ -1,12 +1,12 @@
 [
     {
-        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<db-name>',
-        'encryption_state': 'Enabled',
-        'encryption_type': 'Microsoft.Sql/servers/databases/transparentDataEncryption'
+        "db_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<db-name>",
+        "encryption_state": "Enabled",
+        "encryption_type": "Microsoft.Sql/servers/databases/transparentDataEncryption"
     },
     {
-        'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<db-name>',
-        'encryption_state': 'Disabled',
-        'encryption_type': 'Microsoft.Sql/servers/databases/transparentDataEncryption'
+        "db_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<server-name>/databases/<db-name>",
+        "encryption_state": "Disabled",
+        "encryption_type": "Microsoft.Sql/servers/databases/transparentDataEncryption"
     }
 ]
