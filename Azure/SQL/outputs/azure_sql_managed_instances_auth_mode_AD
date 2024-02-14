@@ -1,0 +1,6 @@
+[
+    {
+        "id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/managedInstances/<resource-name>",
+        "azureADOnlyAuthentication": true
+    }
+]
