@@ -1,0 +1,14 @@
+[
+    {
+        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforMySQL/servers/testing-for-scouter",
+        "server_name": "testing-for-scouter",
+        "publicNetworkAccess": "Enabled",
+        "privateEndpointConnections": []
+    },
+    {
+        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/NetworkWatcherRG/providers/Microsoft.DBforMySQL/servers/testing-for-scouter-2",
+        "server_name": "testing-for-scouter-2",
+        "publicNetworkAccess": "Enabled",
+        "privateEndpointConnections": []
+    }
+]
