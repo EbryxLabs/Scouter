@@ -1,7 +1,7 @@
 [
     {
-        "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/test-for-scouter",
-        "server_name": "test-for-scouter",
+        "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>",
+        "server_name": "<resource-name>",
         "publicNetworkAccess": "Enabled",
         "privateEndpointConnections": []
     }
