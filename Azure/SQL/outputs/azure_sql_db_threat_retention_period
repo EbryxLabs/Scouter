@@ -1,16 +1,16 @@
 [
     {
-      'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>/databases/<resource-name>',
-      'alerting_policy_state': 'Disabled',
-      'retention_period': 0,
-      'emailAccountAdmins': False,
-      'disabledAlerts': 'None'
+        "db_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>/databases/<resource-name>",
+        "alerting_policy_state": "Disabled",
+        "retention_period": 0,
+        "emailAccountAdmins": false,
+        "disabledAlerts": "None"
     },
     {
-      'db_id': '/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>/databases/master',
-      'alerting_policy_state': 'Disabled',
-      'retention_period': 0,
-      'emailAccountAdmins': False,
-      'disabledAlerts': 'None'
+        "db_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>/databases/master",
+        "alerting_policy_state": "Disabled",
+        "retention_period": 0,
+        "emailAccountAdmins": false,
+        "disabledAlerts": "None"
     }
 ]

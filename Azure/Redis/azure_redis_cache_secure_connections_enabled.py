@@ -43,4 +43,7 @@ for subscription in subscriptions:
             
             
             result_list.append({"cache_id":cache_id,"cache_name":cache_name,"enableNonSslPort":enableNonSslPort})
-print(result_list)
+print(json.dumps(result_list,indent=4))
+
+with open(output_file, 'w') as outfile:
+    json.dump(result_list, outfile, indent=4)

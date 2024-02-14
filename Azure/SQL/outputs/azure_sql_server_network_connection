@@ -1,0 +1,8 @@
+[
+    {
+        "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.Sql/servers/<resource-name>",
+        "server_name": "<resource-name>",
+        "publicNetworkAccess": "Disabled",
+        "privateEndpointConnections": []
+    }
+]
