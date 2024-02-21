@@ -1,0 +1,20 @@
+[
+    {
+        "SSL connection requirement results for test-for-scouter: ": {
+            "properties": {
+                "value": "ON",
+                "description": "Whether client connections to the server are required to use some form of secure transport. When this variable is enabled, the server permits only TCP/IP connections that use SSL, or connections that use a socket file (on Unix) or shared memory (on Windows). ",
+                "defaultValue": "ON",
+                "dataType": "Enumeration",
+                "allowedValues": "ON,OFF",
+                "source": "system-default",
+                "isConfigPendingRestart": "False",
+                "isDynamicConfig": "True",
+                "isReadOnly": "False"
+            },
+            "id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforMySQL/flexibleServers/test-for-scouter/configurations/require_secure_transport",
+            "name": "require_secure_transport",
+            "type": "Microsoft.DBforMySQL/flexibleServers/configurations"
+        }
+    }
+]
