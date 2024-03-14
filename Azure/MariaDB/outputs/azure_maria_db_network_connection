@@ -1,8 +1,1 @@
-[
-    {
-        "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.DBforMariaDB/servers/<resource-name>r",
-        "server_name": "<resource-name>r",
-        "publicNetworkAccess": "Enabled",
-        "privateEndpointConnections": []
-    }
-]
+[]
