@@ -40,7 +40,7 @@ def azure_mysql_ssl_encrpyted_connection():
         for group in list(group_list):
             resource_group_name = group.name
             
-            # Define the request to fetch all individual SQL servers from each resource group
+            # Define the request to fetch all single SQL servers from each resource group
             diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.DBforMySQL/servers?api-version=2021-05-01"
             headers = {"Authorization": f"Bearer {credentials.get_token('https://management.azure.com').token}"}
             response = requests.get(diagnostic_settings_endpoint, headers=headers)

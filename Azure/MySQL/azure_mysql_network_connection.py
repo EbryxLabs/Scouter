@@ -35,7 +35,7 @@ def azure_mysql_network_connection():
         subscription_id = subscription.subscription_id
 
             
-        # Define the request to fetch all individual SQL servers from each resource group
+        # Define the request to fetch all single SQL servers from each resource group
 
         diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/providers/Microsoft.DBforMySQL/servers?api-version=2017-12-01"
         headers = {"Authorization": f"Bearer {credentials.get_token('https://management.azure.com').token}"}
