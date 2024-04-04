@@ -1,0 +1,11 @@
+[
+    {
+        "flow_log_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/flowLogs/fl",
+        "flow_log_name": "fl",
+        "flow_logs_enabled": true,
+        "flow_log_retention_policy": {
+            "days": 0,
+            "enabled": false
+        }
+    }
+]

@@ -76,6 +76,16 @@ def Storage():
 
 ##################################################################################################################################
 
+def Logging():
+    from SecurityGroup.flow_log_retention_period import flow_log_retention_period
+
+    flow_log_retention_period()
+
+
+##################################################################################################################################
+
+
+
 # MAIN FUNCTION
 
 parser = argparse.ArgumentParser(description="Run selected services")
@@ -97,6 +107,8 @@ for service_name in services:
         SQL()
     elif service_name == "Storage":
         Storage()
+    elif service_name == "Logging":
+        Logging()
 
     else:
         print(f"Unknown service: {service_name}")
