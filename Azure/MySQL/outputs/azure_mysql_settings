@@ -1,0 +1,50 @@
+[
+    {
+        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforMySQL/flexibleServers/lets-see",
+        "server_name": "lets-see",
+        "backup": {
+            "backupRetentionDays": 3,
+            "geoRedundantBackup": "Disabled",
+            "earliestRestoreDate": "2024-04-05T17:01:42.5179633+00:00"
+        },
+        "publicNetworkAccess": "Enabled",
+        "privateEndpointConnections": [],
+        "require_secure_transport": {
+            "value": "ON",
+            "currentValue": "ON",
+            "description": "Whether client connections to the server are required to use some form of secure transport. When this variable is enabled, the server permits only TCP/IP connections that use SSL, or connections that use a socket file (on Unix) or shared memory (on Windows). ",
+            "defaultValue": "ON",
+            "dataType": "Enumeration",
+            "allowedValues": "ON,OFF",
+            "source": "system-default",
+            "isConfigPendingRestart": "False",
+            "isDynamicConfig": "True",
+            "isReadOnly": "False",
+            "documentationLink": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport"
+        }
+    },
+    {
+        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforMySQL/flexibleServers/test-new",
+        "server_name": "test-new",
+        "backup": {
+            "backupRetentionDays": 7,
+            "geoRedundantBackup": "Disabled",
+            "earliestRestoreDate": "2024-04-05T16:30:37.0388341+00:00"
+        },
+        "publicNetworkAccess": "Enabled",
+        "privateEndpointConnections": [],
+        "require_secure_transport": {
+            "value": "ON",
+            "currentValue": "ON",
+            "description": "Whether client connections to the server are required to use some form of secure transport. When this variable is enabled, the server permits only TCP/IP connections that use SSL, or connections that use a socket file (on Unix) or shared memory (on Windows). ",
+            "defaultValue": "ON",
+            "dataType": "Enumeration",
+            "allowedValues": "ON,OFF",
+            "source": "system-default",
+            "isConfigPendingRestart": "False",
+            "isDynamicConfig": "True",
+            "isReadOnly": "False",
+            "documentationLink": "https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_require_secure_transport"
+        }
+    }
+]

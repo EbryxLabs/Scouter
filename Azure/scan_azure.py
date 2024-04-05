@@ -3,28 +3,28 @@ import argparse
 ##################################################################################################################################
 
 def MariaDB():
-    from MariaDB.azure_maria_db_network_connection import azure_maria_db_network_connection
+    from MariaDB.azure_maria_db import azure_maria_db
 
-    azure_maria_db_network_connection()
+    azure_maria_db()
 
 ##################################################################################################################################
 
 def MySQL():
-    from MySQL.azure_mysql_network_connection import azure_mysql_network_connection
+    from Azure.MySQL.azure_mysql_settings import azure_mysql_settings
     from MySQL.azure_mysql_ssl_encrpyted_connection import azure_mysql_ssl_encrpyted_connection
 
-    azure_mysql_network_connection()
+    azure_mysql_settings()
     azure_mysql_ssl_encrpyted_connection()
 
 ##################################################################################################################################
 
 def PostgreSql():
     from PostgreSql.azure_db_for_postgresql_ad_admin_auth_enabled import azure_db_for_postgresql_ad_admin_auth_enabled
-    from PostgreSql.azure_db_for_postgresql_network_connection import azure_db_for_postgresql_network_connection
+    from Azure.PostgreSql.azure_db_for_postgresql import azure_db_for_postgresql
     from PostgreSql.azure_db_for_postgresql_server_params import azure_db_for_postgresql_server_params
 
     azure_db_for_postgresql_ad_admin_auth_enabled()
-    azure_db_for_postgresql_network_connection()
+    azure_db_for_postgresql()
     azure_db_for_postgresql_server_params()
 
 ##################################################################################################################################
@@ -81,10 +81,7 @@ def Logging():
 
     flow_log_retention_period()
 
-
 ##################################################################################################################################
-
-
 
 # MAIN FUNCTION
 

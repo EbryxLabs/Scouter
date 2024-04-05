@@ -1,8 +1,0 @@
-[
-    {
-        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforMySQL/flexibleServers/test-for-scouter",
-        "server_name": "test-for-scouter",
-        "publicNetworkAccess": "Enabled",
-        "privateEndpointConnections": []
-    }
-]

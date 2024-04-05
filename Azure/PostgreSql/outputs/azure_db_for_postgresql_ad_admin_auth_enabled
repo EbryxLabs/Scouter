@@ -1,8 +1,0 @@
-[
-  {
-    "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.DBforPostgreSQL/flexibleServers/<server-name>",
-    "server_name": "<server-name>",
-    "server_type": "Microsoft.DBforPostgreSQL/flexibleServers",
-    "ad_auth": "Enabled"
-  }
-]

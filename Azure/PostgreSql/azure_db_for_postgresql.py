@@ -6,8 +6,8 @@ import json
 import sys
 import os
 
-def azure_db_for_postgresql_ad_admin_auth_enabled():
-    current_script_name = "azure_db_for_postgresql_ad_admin_auth_enabled"
+def azure_db_for_postgresql():
+    current_script_name = "azure_db_for_postgresql"
     print("Running ",current_script_name," . . . ")
 
     output_file_name = os.path.splitext(os.path.basename(current_script_name))[0]
@@ -50,12 +50,15 @@ def azure_db_for_postgresql_ad_admin_auth_enabled():
             if response.status_code == 200:
                 data = response.json()
                 for item in data.get("value",[]):
-                    server_id = item.get("id",{})
+                    server_id = item.get("id")
                     server_name=item.get("name",{})
                     server_type=item.get("type",{})
+                    publicNetworkAccess = item.get("properties",{}).get("network",{}).get("publicNetworkAccess",{})
+                    backup = item.get("properties",{}).get("backup",{})
                     ad_auth = item.get("properties",{}).get("authConfig",{}).get("activeDirectoryAuth",{})
+                    privateEndpointConnections = item.get("properties",{}).get("privateEndpointConnections",{})
 
-                    result_list.append({"server_id":server_id,"server_name":server_name,"server_type":server_type,"ad_auth":ad_auth})
+                    result_list.append({"server_id":server_id,"server_name":server_name,"server_type":server_type,"publicNetworkAccess":publicNetworkAccess,"backup":backup,"ad_auth":ad_auth,"privateEndpointConnections":privateEndpointConnections})
 
 
             diagnostic_settings_endpoint = f"https://management.azure.com/subscriptions/{subscription_id}/resourceGroups/{resource_group_name}/providers/Microsoft.DBforPostgreSQL/servers?api-version=2017-12-01"
@@ -65,14 +68,17 @@ def azure_db_for_postgresql_ad_admin_auth_enabled():
             if response.status_code == 200:
                 data = response.json()
                 for item in data.get("value",[]):
-                    server_id = item.get("id",{})
+                    server_id = item.get("id")
                     server_name=item.get("name",{})
                     server_type=item.get("type",{})
+                    publicNetworkAccess = item.get("properties",{}).get("network",{}).get("publicNetworkAccess",{})
                     ad_auth = item.get("properties",{}).get("authConfig",{}).get("activeDirectoryAuth",{})
+                    backup = item.get("properties",{}).get("backup")
+                    privateEndpointConnections = item.get("properties",{}).get("privateEndpointConnections")
 
-                    result_list.append({"server_id":server_id,"server_name":server_name,"server_type":server_type,"ad_auth":ad_auth})
+                    result_list.append({"server_id":server_id,"server_name":server_name,"server_type":server_type,"publicNetworkAccess":publicNetworkAccess,"backup":backup,"ad_auth":ad_auth,"privateEndpointConnections":privateEndpointConnections})
 
 
 
     with open(output_file, 'w') as outfile:
-        json.dump(result_list, outfile, indent=4)   
+        json.dump(result_list, outfile, indent=4)
