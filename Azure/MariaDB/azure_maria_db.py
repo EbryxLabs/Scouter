@@ -45,7 +45,7 @@ def azure_maria_db():
             for item in data.get("value",[]):
                 server_id = item.get("id",{})
                 server_name = item.get("name",{})
-                backup = item.get("properties",{}).get("backup",{})
+                backup = item.get("properties",{}).get("backup")
                 publicNetworkAccess = item.get("properties",{}).get("publicNetworkAccess",{})
                 privateEndpointConnections = item.get("properties",{}).get("privateEndpointConnections",{})
 
@@ -53,5 +53,3 @@ def azure_maria_db():
 
     with open(output_file, 'w') as outfile:
         json.dump(result_list, outfile, indent=4)
-
-azure_maria_db()
