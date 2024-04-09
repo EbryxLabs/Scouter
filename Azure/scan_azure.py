@@ -30,9 +30,9 @@ def PostgreSql():
 ##################################################################################################################################
 
 def Redis():
-    from Redis.azure_redis_cache_secure_connections_enabled import azure_redis_cache_secure_connections_enabled
+    from Redis.azure_redis_cache_secure_connections import azure_redis_cache_secure_connections
 
-    azure_redis_cache_secure_connections_enabled()
+    azure_redis_cache_secure_connections()
 
 ##################################################################################################################################
 

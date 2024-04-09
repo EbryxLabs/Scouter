@@ -5,9 +5,9 @@ import requests
 import os
 import json
 
-def azure_redis_cache_private_link():
+def azure_redis_cache_secure_connections():
     
-  current_script_name = "azure_redis_cache_private_link"
+  current_script_name = "azure_redis_cache_secure_connections"
   print("Running ",current_script_name," . . . ")
   output_file_name = os.path.splitext(os.path.basename(current_script_name))[0]
 
@@ -52,5 +52,3 @@ def azure_redis_cache_private_link():
 
   with open(output_file, 'w') as outfile:
       json.dump(result_list, outfile, indent=4)
-
-azure_redis_cache_private_link()
