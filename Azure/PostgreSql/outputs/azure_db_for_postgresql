@@ -1,0 +1,15 @@
+[
+    {
+        "server_id": "/subscriptions/d38d88b0-a15c-4e71-bcec-ff07d75f5a97/resourceGroups/Azure-Test-for-scouter/providers/Microsoft.DBforPostgreSQL/flexibleServers/analy",
+        "server_name": "analy",
+        "server_type": "Microsoft.DBforPostgreSQL/flexibleServers",
+        "publicNetworkAccess": "Enabled",
+        "backup": {
+            "backupRetentionDays": 7,
+            "geoRedundantBackup": "Disabled",
+            "earliestRestoreDate": "2024-04-05T18:02:57.635541+00:00"
+        },
+        "ad_auth": "Enabled",
+        "privateEndpointConnections": {}
+    }
+]

@@ -6,8 +6,8 @@ import json
 import sys
 import os
 
-def azure_maria_db_network_connection():
-    current_script_name = "azure_maria_db_network_connection"
+def azure_maria_db():
+    current_script_name = "azure_maria_db"
     print("Running ",current_script_name," . . . ")
     output_file_name = os.path.splitext(os.path.basename(current_script_name))[0]
 
@@ -45,10 +45,13 @@ def azure_maria_db_network_connection():
             for item in data.get("value",[]):
                 server_id = item.get("id",{})
                 server_name = item.get("name",{})
+                backup = item.get("properties",{}).get("backup",{})
                 publicNetworkAccess = item.get("properties",{}).get("publicNetworkAccess",{})
                 privateEndpointConnections = item.get("properties",{}).get("privateEndpointConnections",{})
 
-                result_list.append({"server_id":server_id,"server_name":server_name,"publicNetworkAccess":publicNetworkAccess,"privateEndpointConnections":privateEndpointConnections})
+                result_list.append({"server_id":server_id,"server_name":server_name,"backup":backup,"publicNetworkAccess":publicNetworkAccess,"privateEndpointConnections":privateEndpointConnections})
 
     with open(output_file, 'w') as outfile:
         json.dump(result_list, outfile, indent=4)
+
+azure_maria_db()

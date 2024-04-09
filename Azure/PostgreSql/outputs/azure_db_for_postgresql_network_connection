@@ -1,9 +1,0 @@
-[
-    {
-        "server_id": "/subscriptions/<subscription-id>/resourceGroups/<rg-name>/providers/Microsoft.DBforPostgreSQL/flexibleServers/<resource-name>",
-        "server_name": "<resource-name>",
-        "server_type": "Microsoft.DBforPostgreSQL/flexibleServers",
-        "publicNetworkAccess": "Enabled",
-        "privateEndpointConnections": {}
-    }
-]
