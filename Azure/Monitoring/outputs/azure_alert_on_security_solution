@@ -1,0 +1,19 @@
+[
+    {
+        "Alerts for these activities exist : ": [
+            "Microsoft.Security/securitySolutions/delete",
+            {
+                "Find below the details of the existing alerts": [
+                    {
+                        "name": "another-testt",
+                        "operation_name": "Microsoft.Security/securitySolutions/delete",
+                        "enabled": true
+                    }
+                ]
+            }
+        ],
+        "Alerts for these activities do not exist : ": [
+            "Microsoft.Security/securitySolutions/write"
+        ]
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "Alerts for these activities exist : ": [
+            "Microsoft.DBforMySQL/servers/firewallRules/write",
+            {
+                "Find below the details of the existing alerts": [
+                    {
+                        "name": "test-sql-firewall-alert",
+                        "operation_name": "Microsoft.DBforMySQL/servers/firewallRules/write",
+                        "enabled": true
+                    }
+                ]
+            }
+        ],
+        "Alerts for these activities do not exist : ": [
+            "Microsoft.SQL/servers/outboundFirewallRules/write",
+            "Microsoft.SQL/servers/ipv6FirewallRules/write",
+            "Microsoft.SQL/servers/FirewallRules/write",
+            "Microsoft.DBforMySQL/flexibleServers/firewallRules/write",
+            "Microsoft.DBforPostgreSQL/servers/firewallRules/write",
+            "Microsoft.DBforPostgreSQL/serversv2/firewallRules/write",
+            "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/write",
+            "Microsoft.DBforMariaDB/servers/firewallRules/write",
+            "Microsoft.Cache/redis/firewallRules/write",
+            "Microsoft.SQL/servers/outboundFirewallRules/delete",
+            "Microsoft.SQL/servers/ipv6FirewallRules/delete",
+            "Microsoft.SQL/servers/FirewallRules/delete",
+            "Microsoft.DBforMySQL/flexibleServers/firewallRules/delete",
+            "Microsoft.DBforMySQL/servers/firewallRules/delete",
+            "Microsoft.DBforPostgreSQL/servers/firewallRules/delete",
+            "Microsoft.DBforPostgreSQL/serversv2/firewallRules/delete",
+            "Microsoft.DBforPostgreSQL/flexibleServers/firewallRules/delete",
+            "Microsoft.DBforMariaDB/servers/firewallRules/delete"
+        ]
+    }
+]

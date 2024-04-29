@@ -1,0 +1,32 @@
+[
+    {
+        "Alerts for these activities exist : ": [
+            "Microsoft.ClassicNetwork/networkSecurityGroups/write",
+            "Microsoft.ClassicNetwork/networkSecurityGroups/delete",
+            "Microsoft.Network/networkSecurityGroups/securityRules/write",
+            {
+                "Find below the details of the existing alerts": [
+                    {
+                        "name": "test-for-scouter",
+                        "enabled": true
+                    },
+                    {
+                        "name": "test-for-scouter-2",
+                        "enabled": true
+                    },
+                    {
+                        "name": "another-test",
+                        "enabled": true
+                    }
+                ]
+            }
+        ],
+        "Alerts for these activities do not exist : ": [
+            "Microsoft.Network/networkSecurityGroups/delete",
+            "Microsoft.Network/networkSecurityGroups/write",
+            "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/write",
+            "Microsoft.Network/networkSecurityGroups/securityRules/delete",
+            "Microsoft.ClassicNetwork/networkSecurityGroups/securityRules/delete"
+        ]
+    }
+]
