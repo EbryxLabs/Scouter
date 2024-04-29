@@ -1,0 +1,5 @@
+[
+    {
+        "Result": "The required rule does not exist, please create alert rule through Azure Monitor to notify on rule creation"
+    }
+]

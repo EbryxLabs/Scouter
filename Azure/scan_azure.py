@@ -76,10 +76,34 @@ def Storage():
 
 ##################################################################################################################################
 
-def Logging():
-    from SecurityGroup.flow_log_retention_period import flow_log_retention_period
+def FlowLogLogging():
+    from FlowLogLogging.flow_log_retention_period import flow_log_retention_period
 
     flow_log_retention_period()
+
+##################################################################################################################################
+
+def Vault():
+    from Vault.azure_vault_logging_enabled import azure_vault_logging_enabled
+    from Vault.azure_vault_purge_protection import azure_vault_purge_protection
+
+    azure_vault_logging_enabled()
+    azure_vault_purge_protection()
+
+##################################################################################################################################
+
+def Monitoring():
+    from Monitoring.azure_alert_on_network_security_group import azure_alert_on_network_security_group
+    from Monitoring.azure_alert_on_policy_assigment import azure_alert_on_policy_assigment
+    from Monitoring.azure_alert_on_security_solution import azure_alert_on_security_solution
+    from Monitoring.azure_alert_on_sql_firewall_rules import azure_alert_on_sql_firewall_rules
+    from Monitoring.azure_alert_on_update_security_policy import azure_alert_on_update_security_policy
+
+    azure_alert_on_network_security_group()
+    azure_alert_on_policy_assigment()
+    azure_alert_on_security_solution()
+    azure_alert_on_sql_firewall_rules()
+    azure_alert_on_update_security_policy()
 
 ##################################################################################################################################
 
@@ -104,9 +128,12 @@ for service_name in services:
         SQL()
     elif service_name == "Storage":
         Storage()
-    elif service_name == "Logging":
-        Logging()
-
+    elif service_name == "Monitoring":
+        Monitoring()
+    elif service_name == "Vault":
+        Vault()
+    elif service_name == "FlowLogLogging":
+        FlowLogLogging()
     else:
         print(f"Unknown service: {service_name}")
 

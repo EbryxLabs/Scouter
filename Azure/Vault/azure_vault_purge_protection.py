@@ -48,7 +48,5 @@ def azure_vault_purge_protection():
           data = response.json()
           print(data)
 
-
   with open(output_file, 'w') as outfile:
       json.dump(result_list, outfile, indent=4)
-azure_vault_purge_protection()
